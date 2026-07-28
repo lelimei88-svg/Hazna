@@ -1,5 +1,7 @@
 import React from 'react';
 import { ChevronRight, Sparkles, Coffee, Award, CheckCircle2 } from 'lucide-react';
+import strawberryMatchaImg from '../assets/images/stawberry_matcha_latte.jpg';
+import berryAmericanoImg from '../assets/images/berry_americano.jpg';
 
 interface HomeProductPreviewProps {
   onNavigate: (page: 'home' | 'product' | 'career' | 'gallery' | 'contact') => void;
@@ -17,31 +19,17 @@ interface BeverageMenu {
 
 const MENU_ITEMS: BeverageMenu[] = [
   {
-    id: 'matcha',
-    name: 'Premium Matcha Latte',
-    category: 'Varian Non-Coffee',
-    badge: 'Signature Non-Coffee',
-    description: 'Perpaduan teh hijau Jepang pilihan dengan susu segar yang creamy, memberikan sensasi ketenangan di setiap tegukan. Sangat cocok untuk menemani hari santai Anda.',
-    image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=800&q=80',
-    flavorNotes: ['Matcha Jepang Murni', 'Fresh Creamy Milk', 'Aroma Otentik']
+    id: 'Strawbbery Matcha Latte',
+    name: 'Strawbbery Matcha Latte',
+    description: 'Harmoni unik antara bubuk matcha premium yang autentik dengan segarnya selai stroberi manis, menciptakan kombinasi rasa yang lembut, menyegarkan, dan estetik.,
+    image: strawberryMatchaImg,
   },
+
   {
-    id: 'capuccino',
-    name: 'Signature Capuccino',
-    category: 'Varian Coffee Espresso',
-    badge: 'Classic Espresso',
-    description: 'Keseimbangan sempurna antara espresso yang kuat dengan foam susu yang lembut. Pilihan terbaik untuk membangkitkan semangat dan fokus Anda.',
-    image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80',
-    flavorNotes: ['Arabica Espresso', 'Silky Milk Foam', 'Rich Coffee Body']
-  },
-  {
-    id: 'milo',
-    name: 'Rich Creamy Milo',
-    badge: 'All-Time Favorite',
-    category: 'Varian Chocolate Malt',
-    description: 'Cita rasa cokelat malt legendaris yang disajikan dengan sentuhan modern. Rasanya yang manis dan menenangkan menjadi favorit sepanjang masa bagi semua kalangan.',
-    image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80',
-    flavorNotes: ['Chocolate Malt Base', 'Creamy Milk', 'Rich Cocoa Accent']
+    id: 'Berry Americano',
+    name: 'Berry Americano',
+    description: 'Inovasi kopi Americano yang kuat dengan sentuhan sirup beri yang segar, memberikan sensasi rasa buah yang berpadu sempurna dengan aroma kopi yang tajam.',
+    image:berryAmericanoImg,
   }
 ];
 
@@ -57,7 +45,7 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({ onNaviga
             <span>Our Product</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#1A1A1A] tracking-tight">
-            Menu Minuman <span className="text-[#FF6B00]">Unggulan</span>
+            Menu Minuman <span className="text-[#FF6B00]">Terbaru</span>
           </h2>
           <p className="text-xs sm:text-sm text-gray-700 font-medium leading-relaxed max-w-lg">
             Rasakan sensasi otentik racikan minuman khas Java Cafe. Setiap tegukan adalah perpaduan sempurna dari bahan pilihan.
