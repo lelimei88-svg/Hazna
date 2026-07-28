@@ -2,6 +2,7 @@ import React from 'react';
 import { ChevronRight, Sparkles, Coffee, Award, CheckCircle2 } from 'lucide-react';
 import strawberryMatchaImg from '../assets/images/stawberry_matcha_latte.jpg';
 import berryAmericanoImg from '../assets/images/berry_americano.jpg';
+import { FEATURED_ITEMS } from '../data/menuItems';
 
 interface HomeProductPreviewProps {
   onNavigate: (page: 'home' | 'product' | 'career' | 'gallery' | 'contact') => void;
@@ -10,11 +11,8 @@ interface HomeProductPreviewProps {
 interface BeverageMenu {
   id: string;
   name: string;
-  category: string;
-  badge: string;
   description: string;
   image: string;
-  flavorNotes: string[];
 }
 
 const MENU_ITEMS: BeverageMenu[] = [
@@ -54,7 +52,7 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({ onNaviga
 
         {/* 3-Column Product Cards Grid - Seamless on Cream Canvas */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl w-full mx-auto">
-          {MENU_ITEMS.map((item) => (
+          {FEATURED_ITEMS.map((item) => (
             <div
               key={item.id}
               className="bg-[#FDF6F0] rounded-3xl p-6 sm:p-7 border border-orange-200/80 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden group hover:-translate-y-1"
@@ -72,21 +70,12 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({ onNaviga
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
                   
-                  {/* Category Tag */}
-                  <div className="absolute top-3 left-3 bg-[#FF6B00] text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-sm">
-                    {item.badge}
-                  </div>
-
                   {/* Best Seller Badge */}
                   <div className="absolute bottom-3 right-3 bg-slate-900/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg border border-white/20 shadow-xs flex items-center gap-1 backdrop-blur-xs">
                     <Sparkles className="w-3 h-3 text-[#FF6B00]" />
                     <span>Best Seller</span>
                   </div>
                 </div>
-
-                <span className="text-xs font-extrabold text-[#FF6B00] uppercase tracking-wider block mb-1">
-                  {item.category}
-                </span>
 
                 <h3 className="text-xl font-black text-[#1A1A1A] mb-2 leading-snug">
                   {item.name}
@@ -95,27 +84,6 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({ onNaviga
                 <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-normal mb-4">
                   {item.description}
                 </p>
-
-                {/* Flavor Notes - Seamless on Cream */}
-                <div className="flex flex-wrap gap-1.5 pt-3 border-t border-orange-200/80">
-                  {item.flavorNotes.map((note, idx) => (
-                    <span
-                      key={idx}
-                      className="inline-flex items-center gap-1 bg-[#FDF6F0] text-gray-800 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-orange-200/80"
-                    >
-                      <CheckCircle2 className="w-3 h-3 text-[#FF6B00]" />
-                      <span>{note}</span>
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Card Footer Action */}
-              <div className="pt-5 mt-5 border-t border-orange-200/80 flex items-center justify-between">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-gray-600">
-                  <Award className="w-4 h-4 text-[#FF6B00]" />
-                  <span>Resep Otentik</span>
-                </div>
 
                 <button
                   onClick={() => {
@@ -136,6 +104,8 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({ onNaviga
     </section>
   );
 };
+
+export const FEATURED_ITEMS = MENU_ITEMS.slice(0, 2);
 
 
 
