@@ -1,0 +1,65 @@
+{
+  "entities": {
+    "Consultation": {
+      "title": "Consultation Request",
+      "description": "Inquiry form submitted by potential franchise partners or clients",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "minLength": 2, "maxLength": 100 },
+        "whatsapp": { "type": "string", "minLength": 6, "maxLength": 30 },
+        "email": { "type": "string", "format": "email", "maxLength": 100 },
+        "packageInterest": { "type": "string", "maxLength": 100 },
+        "message": { "type": "string", "maxLength": 1000 },
+        "status": { "type": "string", "enum": ["pending", "contacted", "resolved"] },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["name", "whatsapp", "email", "packageInterest"]
+    },
+    "CareerApplication": {
+      "title": "Career Application",
+      "description": "Job application submitted by a candidate",
+      "type": "object",
+      "properties": {
+        "positionId": { "type": "string", "maxLength": 50 },
+        "positionTitle": { "type": "string", "maxLength": 100 },
+        "applicantName": { "type": "string", "minLength": 2, "maxLength": 100 },
+        "whatsapp": { "type": "string", "minLength": 6, "maxLength": 30 },
+        "email": { "type": "string", "format": "email", "maxLength": 100 },
+        "experience": { "type": "string", "maxLength": 500 },
+        "notes": { "type": "string", "maxLength": 1000 },
+        "status": { "type": "string", "enum": ["received", "reviewing", "interview", "rejected"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["positionTitle", "applicantName", "whatsapp", "email"]
+    },
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "User account information for authenticated visitors and admins",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "displayName": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "format": "email", "maxLength": 100 },
+        "photoURL": { "type": "string", "maxLength": 500 },
+        "role": { "type": "string", "enum": ["user", "partner", "admin"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    }
+  },
+  "firestore": {
+    "/consultations/{consultationId}": {
+      "schema": { "$ref": "#/entities/Consultation" },
+      "description": "Public submission collection for partnership and contact inquiries"
+    },
+    "/careerApplications/{applicationId}": {
+      "schema": { "$ref": "#/entities/CareerApplication" },
+      "description": "Job application submissions for company career openings"
+    },
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "User profile collection for authenticated visitors and admins"
+    }
+  }
+}

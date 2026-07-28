@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom Utilities for Glassmorphism & Warm Modern Luxury design system */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 0.5px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(74, 59, 53, 0.05), 0 0 1px 1px rgba(255, 255, 255, 0.9) inset;
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 40px -10px rgba(255, 159, 115, 0.2), 0 0 1px 1px rgba(255, 255, 255, 1) inset;
+}
+
+.bg-peach-gradient {
+  background: linear-gradient(135deg, #FF9F73 0%, #FFB89C 100%);
+}
+
+.bg-peach-gradient-hover:hover {
+  background: linear-gradient(135deg, #f08e60 0%, #f5a788 100%);
+}
+
+.bg-warm-canvas {
+  background-color: #FFFBF7;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFBF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EEDFD7;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF9F73;
+}

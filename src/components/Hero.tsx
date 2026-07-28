@@ -1,0 +1,145 @@
+import React, { useState } from 'react';
+import { Star, ArrowRight, CheckCircle2, Store } from 'lucide-react';
+import { IMAGES } from '../data/franchiseData';
+
+interface HeroProps {
+  onNavigate?: (page: 'home' | 'product' | 'career' | 'gallery' | 'contact') => void;
+  onOpenWhatsApp?: (customMsg?: string) => void;
+  onScrollToCatalog?: () => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
+  const [heroImgSrc, setHeroImgSrc] = useState<string>(IMAGES.hero);
+
+  // Fallback to high quality booth image if local path is unavailable in preview
+  const handleHeroImgError = () => {
+    setHeroImgSrc('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80');
+  };
+
+  return (
+    <section id="hero" className="relative pt-8 sm:pt-14 pb-16 sm:pb-20 mb-8 sm:mb-12 overflow-hidden bg-[#FDF6F0] text-[#1A1A1A] min-h-[80vh] flex flex-col justify-center items-center">
+      {/* Decorative Soft Ambient Glows */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-[#FF9F73]/12 blur-3xl rounded-full pointer-events-none -z-0" />
+      <div className="absolute bottom-10 right-10 w-[450px] h-[350px] bg-[#FF6B00]/08 blur-3xl rounded-full pointer-events-none -z-0" />
+
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10 my-auto">
+        {/* 2-Column Responsive Grid System */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center w-full">
+          
+          {/* Left Column (Corporate Info & CTAs): Order 2 on Mobile, Order 1 on Desktop */}
+          <div className="w-full flex flex-col items-center md:items-start text-center md:text-left space-y-6 order-2 md:order-1 mt-6 md:mt-0">
+            
+            {/* Corporate Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold shadow-xs tracking-wide">
+              <span className="w-2 h-2 rounded-full bg-[#FF6B00] animate-pulse" />
+              <span>CV Hazna Berkah Barokah Indonesia</span>
+            </div>
+
+            {/* Headlines & Corporate Description */}
+            <div className="space-y-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1A1A1A] tracking-tight leading-[1.15]">
+                Solusi Ekosistem Bisnis Kuliner{' '}
+                <span className="text-[#FF6B00] block sm:inline">
+                  Terintegrasi
+                </span>
+              </h1>
+
+              <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium leading-relaxed max-w-xl">
+                CV Hazna Berkah Barokah Indonesia adalah mitra strategis Anda dalam membangun bisnis kuliner yang menguntungkan. Kami menghadirkan booth gerobak modern, sistem operasional teruji, dan pendampingan penuh untuk memastikan setiap mitra meraih kesuksesan yang berkelanjutan.
+              </p>
+            </div>
+
+            {/* Tagline Feature Badges */}
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-xs font-bold text-gray-800">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-orange-200/90 bg-white/80 text-gray-800 shadow-2xs backdrop-blur-xs">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B00]" />
+                Sistem Terintegrasi
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-orange-200/90 bg-white/80 text-gray-800 shadow-2xs backdrop-blur-xs">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B00]" />
+                100% Hak Milik Mitra
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-orange-200/90 bg-white/80 text-gray-800 shadow-2xs backdrop-blur-xs">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B00]" />
+                Margin 60% – 70% per Cup
+              </span>
+            </div>
+
+            {/* Call to Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2 w-full sm:w-auto">
+              <button
+                onClick={() => onNavigate && onNavigate('contact')}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#FF6B00] hover:bg-[#E05E00] text-white font-black text-sm tracking-wide shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span>Konsultasi Kemitraan</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+
+              <button
+                onClick={() => onNavigate && onNavigate('product')}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-slate-900 hover:bg-black text-white font-extrabold text-sm border border-slate-900 shadow-xs hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center cursor-pointer"
+              >
+                Lihat Katalog Produk
+              </button>
+            </div>
+
+            {/* Social Proof */}
+            <div className="pt-4 flex items-center justify-center md:justify-start gap-3.5 border-t border-orange-200/80 w-full">
+              <div className="flex -space-x-2 shrink-0">
+                <img className="inline-block h-8 w-8 rounded-full ring-2 ring-[#FDF6F0] object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=100" alt="Mitra Java Cafe" referrerPolicy="no-referrer" />
+                <img className="inline-block h-8 w-8 rounded-full ring-2 ring-[#FDF6F0] object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=100" alt="Mitra Java Cafe" referrerPolicy="no-referrer" />
+                <img className="inline-block h-8 w-8 rounded-full ring-2 ring-[#FDF6F0] object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=100" alt="Mitra Java Cafe" referrerPolicy="no-referrer" />
+              </div>
+              <div className="text-left">
+                <div className="flex items-center gap-1 text-amber-500">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-[#FF6B00] stroke-[#FF6B00]" />
+                  ))}
+                  <span className="text-xs font-bold text-[#1A1A1A] ml-1">4.9 / 5.0</span>
+                </div>
+                <p className="text-xs text-gray-700 font-medium">
+                  Dipercaya <strong className="font-bold text-[#1A1A1A]">500+ Mitra Ekosistem Hazna</strong> di seluruh Indonesia
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Right Column (Visual Booth Image): Clean Focal Point */}
+          <div className="w-full max-w-lg md:max-w-xl mx-auto relative order-1 md:order-2 flex flex-col items-center justify-center">
+            
+            {/* Booth Image Container */}
+            <div className="relative w-full aspect-4/3 flex items-center justify-center p-2 rounded-2xl bg-transparent">
+              
+              {/* Top Badge: Concept Booth Java Cafe */}
+              <div className="absolute -top-3 left-2 sm:left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 sm:py-2 rounded-2xl border border-orange-200/90 shadow-lg flex items-center gap-2 z-20 text-gray-900">
+                <Store className="w-4 h-4 text-[#FF6B00] shrink-0" />
+                <div>
+                  <p className="text-xs font-black text-[#1A1A1A]">Concept Booth Java Cafe</p>
+                  <p className="text-[10px] text-gray-500 font-bold">Gerobak Container Eksklusif</p>
+                </div>
+              </div>
+
+              {/* Main Booth Image */}
+              <img
+                src={heroImgSrc}
+                alt="Gerobak Booth Java Cafe - CV Hazna Berkah Barokah Indonesia"
+                onError={handleHeroImgError}
+                className="w-full h-full object-contain filter drop-shadow-xl hover:scale-102 transition-transform duration-500 rounded-2xl"
+                referrerPolicy="no-referrer"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
+
+

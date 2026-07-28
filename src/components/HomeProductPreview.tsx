@@ -1,0 +1,153 @@
+import React from 'react';
+import { ChevronRight, Sparkles, Coffee, Award, CheckCircle2 } from 'lucide-react';
+
+interface HomeProductPreviewProps {
+  onNavigate: (page: 'home' | 'product' | 'career' | 'gallery' | 'contact') => void;
+}
+
+interface BeverageMenu {
+  id: string;
+  name: string;
+  category: string;
+  badge: string;
+  description: string;
+  image: string;
+  flavorNotes: string[];
+}
+
+const MENU_ITEMS: BeverageMenu[] = [
+  {
+    id: 'matcha',
+    name: 'Premium Matcha Latte',
+    category: 'Varian Non-Coffee',
+    badge: 'Signature Non-Coffee',
+    description: 'Perpaduan teh hijau Jepang pilihan dengan susu segar yang creamy, memberikan sensasi ketenangan di setiap tegukan. Sangat cocok untuk menemani hari santai Anda.',
+    image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=800&q=80',
+    flavorNotes: ['Matcha Jepang Murni', 'Fresh Creamy Milk', 'Aroma Otentik']
+  },
+  {
+    id: 'capuccino',
+    name: 'Signature Capuccino',
+    category: 'Varian Coffee Espresso',
+    badge: 'Classic Espresso',
+    description: 'Keseimbangan sempurna antara espresso yang kuat dengan foam susu yang lembut. Pilihan terbaik untuk membangkitkan semangat dan fokus Anda.',
+    image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80',
+    flavorNotes: ['Arabica Espresso', 'Silky Milk Foam', 'Rich Coffee Body']
+  },
+  {
+    id: 'milo',
+    name: 'Rich Creamy Milo',
+    badge: 'All-Time Favorite',
+    category: 'Varian Chocolate Malt',
+    description: 'Cita rasa cokelat malt legendaris yang disajikan dengan sentuhan modern. Rasanya yang manis dan menenangkan menjadi favorit sepanjang masa bagi semua kalangan.',
+    image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80',
+    flavorNotes: ['Chocolate Malt Base', 'Creamy Milk', 'Rich Cocoa Accent']
+  }
+];
+
+export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({ onNavigate }) => {
+  return (
+    <section id="our-product-preview" className="py-16 sm:py-20 relative overflow-hidden bg-[#FDF6F0] border-b border-orange-100/60 flex flex-col justify-center items-center">
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+        
+        {/* Section Header - Centered Layout */}
+        <div className="text-center max-w-xl mx-auto space-y-2.5 mb-10 sm:mb-12 flex flex-col items-center justify-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold shadow-xs">
+            <Coffee className="w-3.5 h-3.5 text-[#FF6B00]" />
+            <span>Our Product</span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#1A1A1A] tracking-tight">
+            Menu Minuman <span className="text-[#FF6B00]">Unggulan</span>
+          </h2>
+          <p className="text-xs sm:text-sm text-gray-700 font-medium leading-relaxed max-w-lg">
+            Rasakan sensasi otentik racikan minuman khas Java Cafe. Setiap tegukan adalah perpaduan sempurna dari bahan pilihan.
+          </p>
+        </div>
+
+        {/* 3-Column Product Cards Grid - Seamless on Cream Canvas */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl w-full mx-auto">
+          {MENU_ITEMS.map((item) => (
+            <div
+              key={item.id}
+              className="bg-[#FDF6F0] rounded-3xl p-6 sm:p-7 border border-orange-200/80 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between relative overflow-hidden group hover:-translate-y-1"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl -mr-10 -mt-10 group-hover:scale-125 transition-transform pointer-events-none" />
+              
+              <div>
+                {/* Product Image Header Container - Seamless */}
+                <div className="relative aspect-4/3 rounded-2xl overflow-hidden mb-5 drop-shadow-md">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                  
+                  {/* Category Tag */}
+                  <div className="absolute top-3 left-3 bg-[#FF6B00] text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-sm">
+                    {item.badge}
+                  </div>
+
+                  {/* Best Seller Badge */}
+                  <div className="absolute bottom-3 right-3 bg-slate-900/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-lg border border-white/20 shadow-xs flex items-center gap-1 backdrop-blur-xs">
+                    <Sparkles className="w-3 h-3 text-[#FF6B00]" />
+                    <span>Best Seller</span>
+                  </div>
+                </div>
+
+                <span className="text-xs font-extrabold text-[#FF6B00] uppercase tracking-wider block mb-1">
+                  {item.category}
+                </span>
+
+                <h3 className="text-xl font-black text-[#1A1A1A] mb-2 leading-snug">
+                  {item.name}
+                </h3>
+
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-normal mb-4">
+                  {item.description}
+                </p>
+
+                {/* Flavor Notes - Seamless on Cream */}
+                <div className="flex flex-wrap gap-1.5 pt-3 border-t border-orange-200/80">
+                  {item.flavorNotes.map((note, idx) => (
+                    <span
+                      key={idx}
+                      className="inline-flex items-center gap-1 bg-[#FDF6F0] text-gray-800 text-[11px] font-bold px-2.5 py-1 rounded-lg border border-orange-200/80"
+                    >
+                      <CheckCircle2 className="w-3 h-3 text-[#FF6B00]" />
+                      <span>{note}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Card Footer Action */}
+              <div className="pt-5 mt-5 border-t border-orange-200/80 flex items-center justify-between">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-gray-600">
+                  <Award className="w-4 h-4 text-[#FF6B00]" />
+                  <span>Resep Otentik</span>
+                </div>
+
+                <button
+                  onClick={() => {
+                    onNavigate('product');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="inline-flex items-center gap-1 px-4 py-2 rounded-xl bg-[#FF6B00] hover:bg-[#E05E00] text-white text-xs font-bold transition-all shadow-xs cursor-pointer group/btn"
+                >
+                  <span>Learn More</span>
+                  <ChevronRight className="w-3.5 h-3.5 text-white/90 group-hover/btn:translate-x-0.5 transition-transform" />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+
+
