@@ -1,8 +1,8 @@
 import React, { useState } from "react"; // ✅ Tambah useState
 import { ChevronRight, ChevronLeft, Sparkles, Coffee } from "lucide-react"; // ✅ Tambah ChevronLeft
-import strawberryMatchaImg from "../assets/images/stawberry_matcha_latte-removebg-preview.jpg";
-import berryAmericanoImg from "../assets/images/berry_americano-removebg-preview.jpg";
-import matchaChocoImg from "../assets/images/matcha_choco-removebg-preview.jpg"; // ✅ Fix typo
+import strawberryMatchaImg from "../assets/images/stawberry_matcha_latte-removebg-preview.png";
+import berryAmericanoImg from "../assets/images/berry_americano-removebg-preview.png";
+import matchaChocoImg from "../assets/images/matcha_choco-removebg-preview.png"; // ✅ Fix typo
 
 interface HomeProductPreviewProps {
   onNavigate: (
