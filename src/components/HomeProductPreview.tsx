@@ -3,7 +3,7 @@ import { ChevronRight, Sparkles, Coffee } from 'lucide-react';
 import strawberryMatchaImg from '../assets/images/stawberry_matcha_latte.jpg';
 // ✅ Sementara pakai gambar yang sama untuk berry americano
 // Nanti ganti setelah file berry_americano.jpg ditambahkan ke folder assets
-import berryAmericanoImg from '../assets/images/stawberry_matcha_latte.jpg';
+import berryAmericanoImg from '../assets/images/berry_americano.jpg';
 
 interface HomeProductPreviewProps {
   onNavigate: (page: 'home' | 'product' | 'career' | 'gallery' | 'contact') => void;
