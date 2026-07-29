@@ -1,5 +1,7 @@
 import React from 'react';
-
+import machiroImg from '../assets/images/LogoMachiro.png';
+import rumaImg from '../assets/images/RUMAlogo.jpg';
+import javaImg from '../assets/images/logoJavaCafe.jpg';
 // Data logo brand yang dikelola
 const managedBrands = [
   { name: 'Machiro', src: '/LogoMachiro.png', width: 'w-24' },
