@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, ArrowRight, CheckCircle2, Store } from 'lucide-react';
 import { IMAGES } from '../data/franchiseData';
+import heroBoothImg from '../assets/images/javacafe_booth_1785119575726.jpg';
 
 interface HeroProps {
   onNavigate?: (page: 'home' | 'product' | 'career' | 'gallery' | 'contact') => void;
@@ -13,7 +14,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
   // Fallback to high quality booth image if local path is unavailable in preview
   const handleHeroImgError = () => {
-    setHeroImgSrc('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80');
+    setHeroImgSrc('');
   };
 
   return (
