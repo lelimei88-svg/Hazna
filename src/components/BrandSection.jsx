@@ -22,7 +22,8 @@ export default function BrandSection() {
           {managedBrands.map((brand) => (
             <div 
               key={brand.name} 
-              className={`relative ${brand.width} opacity-70 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300`}
+              // Versi yang sudah diperbaiki (tanpa efek abu-abu)
+className={`relative ${brand.width} opacity-100 transition-opacity duration-300`}
             >
               <img 
                 src={brand.src} 
