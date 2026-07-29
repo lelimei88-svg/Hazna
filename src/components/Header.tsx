@@ -101,10 +101,10 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onNavigate, onOpenPo
               <button
                 onClick={onOpenPortal}
                 className="px-4 py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs tracking-wide shadow-xs hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-1.5 cursor-pointer"
-                title="Portal Database Firebase"
+                title="Partner Database Portal"
               >
                 <Database className="w-3.5 h-3.5 text-[#FF6B00]" />
-                <span>Portal Mitra</span>
+                <span>Partner Portal</span>
               </button>
             )}
             <a
@@ -113,7 +113,7 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onNavigate, onOpenPo
               rel="noopener noreferrer"
               className="px-5 py-2.5 rounded-full bg-[#FF6B00] hover:bg-[#E05E00] text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-md shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer inline-block"
             >
-              Kemitraan
+              Partnership
             </a>
           </div>
 
@@ -159,7 +159,7 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onNavigate, onOpenPo
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full py-3 rounded-full bg-[#FF6B00] hover:bg-[#E05E00] text-white font-extrabold text-sm text-center shadow-md shadow-orange-500/20 block"
               >
-                Kemitraan
+                Partnership
               </a>
             </div>
           </div>
@@ -168,4 +168,3 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onNavigate, onOpenPo
     </header>
   );
 };
-
