@@ -1,19 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu as MenuIcon, X, ChevronRight, Database, ShieldCheck } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
-import { Globe } from 'lucide-react'; // Tambah icon globe
-
-// Di dalam component:
-const { language, setLanguage, t } = useLanguage();
-
-// Tambah tombol language switcher:
-<button
-  onClick={() => setLanguage(language === 'id' ? 'en' : 'id')}
-  className="px-3 py-2 rounded-full bg-white/80 hover:bg-white text-xs font-bold border border-gray-200 transition-all flex items-center gap-1.5"
->
-  <Globe className="w-3.5 h-3.5 text-[#FF6B00]" />
-  {language === 'id' ? 'EN' : 'ID'}
-</button>
+import { Menu as MenuIcon, X, ChevronRight, Database } from 'lucide-react';
 
 interface HeaderProps {
   activePage: 'home' | 'product' | 'career' | 'gallery' | 'contact';
@@ -63,12 +49,11 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onNavigate, onOpenPo
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Logo Hazna Berkah with CV in black font */}
+          {/* Logo Hazna Berkah */}
           <button
             onClick={() => handleNavClick('home')}
             className="flex items-center gap-3 group cursor-pointer text-left"
           >
-            {/* 4-Square Grid Icon with Top-Right Orange Accent */}
             <div className="w-10 h-10 group-hover:scale-105 transition-transform shrink-0">
               <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="8" y="8" width="38" height="38" rx="6" fill="#1A1A1A" />
@@ -109,7 +94,7 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onNavigate, onOpenPo
             })}
           </nav>
 
-          {/* Right Action: Solid Orange 'Kemitraan' CTA & Portal Button */}
+          {/* Right Action: Partner Portal & Partnership CTA */}
           <div className="hidden sm:flex items-center gap-2.5">
             {onOpenPortal && (
               <button
