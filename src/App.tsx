@@ -11,7 +11,6 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { Footer } from './components/Footer';
 import { PartnerPortalModal } from './components/PartnerPortalModal';
 import { AuthProvider } from './context/AuthContext';
-import { LanguageProvider } from './context/LanguageContext';
 import { COMPANY_INFO } from './data/franchiseData';
 
 function AppContent() {
@@ -88,10 +87,8 @@ function AppContent() {
 
 export default function App() {
   return (
-    <LanguageProvider>
-      <AuthProvider>
-        <AppContent />
-      </AuthProvider>
-    </LanguageProvider>
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 }
