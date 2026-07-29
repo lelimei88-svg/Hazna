@@ -1,8 +1,8 @@
-import React, { useState } from "react"; // ✅ Tambah useState
-import { ChevronRight, ChevronLeft, Sparkles, Coffee } from "lucide-react"; // ✅ Tambah ChevronLeft
+import React, { useState } from "react";
+import { ChevronRight, ChevronLeft, Sparkles, Coffee } from "lucide-react";
 import strawberryMatchaImg from "../assets/images/stawberry_matcha_latte-removebg-preview.png";
 import berryAmericanoImg from "../assets/images/berry_americano-removebg-preview.png";
-import matchaChocoImg from "../assets/images/mactha_choco-removebg-preview.png"; // ✅ Fix typo
+import matchaChocoImg from "../assets/images/mactha_choco-removebg-preview.png";
 
 interface HomeProductPreviewProps {
   onNavigate: (
@@ -85,7 +85,7 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({
             className="absolute left-0 sm:-left-4 z-10 bg-white hover:bg-gray-50 text-gray-700 p-3 rounded-full shadow-lg border border-gray-200 transition-all hover:scale-110 cursor-pointer"
             aria-label="Previous products"
           >
-            <ChevronLeft className="w-5 h-5" /> {/* ✅ Sekarang tidak error */}
+            <ChevronLeft className="w-5 h-5" />
           </button>
 
           {/* Product Cards */}
@@ -96,7 +96,7 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({
                   key={item.id}
                   className="flex-1 bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-1"
                 >
-                  {/* Image Container dengan Background Merah */}
+                  {/* Image Container */}
                   <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-white flex items-center justify-center p-6">
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                       <div className="w-40 h-40 bg-white/10 rounded-full blur-2xl" />
@@ -108,6 +108,7 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({
                       className="relative z-10 w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                     />
+                  </div> {/* ✅ INI YANG SEBELUMNYA HILANG! */}
 
                   <h3 className="text-base font-bold text-gray-900 mb-2">
                     {item.name}
