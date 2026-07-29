@@ -32,20 +32,20 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             {/* Corporate Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold shadow-xs tracking-wide">
               <span className="w-2 h-2 rounded-full bg-[#FF6B00] animate-pulse" />
-              <span>CV Hazna Berkah Barokah Indonesia</span>
+              <span>Company Profile Perusahaan</span>
             </div>
 
             {/* Headlines & Corporate Description */}
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1A1A1A] tracking-tight leading-[1.15]">
-                Solusi Ekosistem Bisnis Kuliner{' '}
+                Dari Nol Hingga Sukses, Kami Temani Langkah{' '}
                 <span className="text-[#FF6B00] block sm:inline">
-                  Terintegrasi
+                  Anda
                 </span>
               </h1>
 
               <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium leading-relaxed max-w-xl">
-                CV Hazna Berkah Barokah Indonesia adalah mitra strategis Anda dalam membangun bisnis kuliner yang menguntungkan. Kami menghadirkan booth gerobak modern, sistem operasional teruji, dan pendampingan penuh untuk memastikan setiap mitra meraih kesuksesan yang berkelanjutan.
+                Kami sudah terbukti mendampingi 500+ mitra sukses berbisnis kuliner dengan sistem yang lengkap: booth modern, resep terstandarisasi, pelatihan, dan pendampingan intensif. Margin hingga 70% per cup menunggu Anda. Mulai perjalanan bisnis Anda bersama kami sekarang!
               </p>
             </div>
 
@@ -53,15 +53,15 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-xs font-bold text-gray-800">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-orange-200/90 bg-white/80 text-gray-800 shadow-2xs backdrop-blur-xs">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B00]" />
-                Sistem Terintegrasi
+                All-in-One Solution
               </span>
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-orange-200/90 bg-white/80 text-gray-800 shadow-2xs backdrop-blur-xs">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B00]" />
-                100% Hak Milik Mitra
+                Bebas Royalti
               </span>
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-orange-200/90 bg-white/80 text-gray-800 shadow-2xs backdrop-blur-xs">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B00]" />
-                Margin 60% – 70% per Cup
+                 Profit Margin Hingga 70%
               </span>
             </div>
 
@@ -79,7 +79,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 onClick={() => onNavigate && onNavigate('product')}
                 className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-slate-900 hover:bg-black text-white font-extrabold text-sm border border-slate-900 shadow-xs hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center cursor-pointer"
               >
-                Lihat Katalog Produk
+                Katalog Produk
               </button>
             </div>
 
