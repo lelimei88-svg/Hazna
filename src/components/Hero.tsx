@@ -134,7 +134,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
   </div>
 </div>
-      </div>
     </section>
   );
 };
