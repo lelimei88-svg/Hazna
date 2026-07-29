@@ -32,20 +32,20 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             {/* Corporate Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold shadow-xs tracking-wide">
               <span className="w-2 h-2 rounded-full bg-[#FF6B00] animate-pulse" />
-              <span>Company Profile Perusahaan</span>
+              <span>Tentang CV Hazna Berkah </span>
             </div>
 
             {/* Headlines & Corporate Description */}
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1A1A1A] tracking-tight leading-[1.15]">
-                Dari Nol Hingga Sukses, Kami Temani Langkah{' '}
+                Perusahaan ekosistem bisnis kuliner{' '}
                 <span className="text-[#FF6B00] block sm:inline">
-                  Anda
+                  (F&B)
                 </span>
               </h1>
 
               <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium leading-relaxed max-w-xl">
-                Kami sudah terbukti mendampingi 500+ mitra sukses berbisnis kuliner dengan sistem yang lengkap: booth modern, resep terstandarisasi, pelatihan, dan pendampingan intensif. Margin hingga 70% per cup menunggu Anda. Mulai perjalanan bisnis Anda bersama kami sekarang!
+                yang berfokus pada kemitraan usaha minuman melalui brand Java Cafe dan kemitraan waralaba.
               </p>
             </div>
 
