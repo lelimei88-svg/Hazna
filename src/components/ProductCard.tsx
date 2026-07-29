@@ -1,5 +1,5 @@
 import React from 'react';
-import { Coffee, Sparkles, TrendingUp, ChevronRight } from 'lucide-react';
+import { Coffee, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';
 import { DrinkProduct } from '../types';
 
 interface ProductCardProps {
@@ -25,22 +25,22 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <div
       onClick={() => onSelectProduct(product)}
-      className="bg-white/95 rounded-2xl p-4 shadow-lg hover:shadow-xl border border-orange-100/80 hover:border-orange-300/80 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.02] cursor-pointer group flex flex-col justify-between h-full relative overflow-hidden"
+      className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 hover:border-orange-200 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer group flex flex-col h-full"
     >
-      {/* Top Image Container - Aspect Square */}
-      <div className="relative w-full aspect-square rounded-xl overflow-hidden bg-slate-100 mb-3.5 border border-orange-100/50">
+      {/* Image Container - Background Putih (Erdigma Style) */}
+      <div className="relative w-full aspect-square rounded-t-2xl overflow-hidden bg-white flex items-center justify-center p-6">
         <img
           src={imgSrc}
           alt={`Java Cafe ${product.name} - ${product.categoryLabel}`}
           onError={handleImageError}
-          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
           referrerPolicy="no-referrer"
         />
 
         {/* Category Badge - Top Left */}
-        <div className="absolute top-2.5 left-2.5 z-10">
+        <div className="absolute top-3 left-3 z-10">
           <span
-            className={`inline-flex items-center gap-1 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow-md backdrop-blur-xs text-white ${
+            className={`inline-flex items-center gap-1 text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md text-white ${
               isCoffee ? 'bg-[#FF6B00]' : 'bg-emerald-600'
             }`}
           >
@@ -55,66 +55,65 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
         {/* Best Seller / New Badge - Top Right */}
         {product.isBestSeller && (
-          <div className="absolute top-2.5 right-2.5 z-10">
-            <span className="bg-amber-500/95 backdrop-blur-xs text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow-md">
+          <div className="absolute top-3 right-3 z-10">
+            <span className="bg-amber-500 text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
               Best Seller
+            </span>
+          </div>
+        )}
+        {product.isNew && (
+          <div className="absolute top-3 right-3 z-10">
+            <span className="bg-emerald-500 text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+              New
             </span>
           </div>
         )}
       </div>
 
       {/* Product Information */}
-      <div className="flex-1 flex flex-col justify-between space-y-3">
-        <div>
-          {/* Header & Aesthetic Icon */}
-          <div className="flex items-center justify-between gap-1 mb-1">
-            <span className="text-[11px] font-black text-[#FF6B00] uppercase tracking-wider flex items-center gap-1">
-              {isCoffee ? (
-                <Coffee className="w-3 h-3 text-[#FF6B00]" />
-              ) : (
-                <Sparkles className="w-3 h-3 text-emerald-600" />
-              )}
-              {product.categoryLabel}
-            </span>
-            <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200/60 flex items-center gap-0.5">
-              <TrendingUp className="w-2.5 h-2.5" />
-              {product.profitMargin}
-            </span>
-          </div>
+      <div className="p-5 flex-1 flex flex-col">
+        {/* Category Label */}
+        <span className="text-[10px] font-bold text-[#FF6B00] uppercase tracking-wider mb-1">
+          {product.categoryLabel}
+        </span>
 
-          {/* Product Name */}
-          <h3 className="text-base font-extrabold text-[#1A1A1A] group-hover:text-[#FF6B00] transition-colors leading-snug line-clamp-1">
-            {product.name}
-          </h3>
+        {/* Product Name */}
+        <h3 className="text-lg font-black text-[#1A1A1A] mb-2 leading-tight group-hover:text-[#FF6B00] transition-colors">
+          {product.name}
+        </h3>
 
-          {/* Short Description */}
-          <p className="text-xs text-gray-600 font-medium leading-relaxed mt-1 line-clamp-2">
-            {product.shortDescription}
-          </p>
-        </div>
+        {/* Short Description */}
+        <p className="text-xs text-gray-600 font-medium leading-relaxed mb-4 line-clamp-2 flex-1">
+          {product.shortDescription}
+        </p>
 
-        {/* Bottom Price & Action Footer */}
-        <div className="pt-2 border-t border-orange-100/80 flex items-center justify-between gap-2">
+        {/* Price & Margin */}
+        <div className="flex items-center justify-between mb-4 pt-3 border-t border-gray-100">
           <div>
-            <span className="text-[10px] text-gray-400 font-bold block uppercase tracking-wider">Harga Jual</span>
-            <span className="text-sm font-black text-[#1A1A1A]">{product.price}</span>
+            <p className="text-[10px] text-gray-500 font-bold uppercase">Harga Jual</p>
+            <p className="text-base font-black text-[#1A1A1A]">{product.price}</p>
           </div>
-
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              if (onInquireProduct) {
-                onInquireProduct(product.name);
-              } else {
-                onSelectProduct(product);
-              }
-            }}
-            className="px-3 py-1.5 rounded-full bg-slate-900 group-hover:bg-[#FF6B00] text-white text-xs font-bold transition-all flex items-center gap-1 cursor-pointer shadow-xs"
-          >
-            <span>Pesan</span>
-            <ChevronRight className="w-3.5 h-3.5" />
-          </button>
+          <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50">
+            <TrendingUp className="w-3 h-3 text-emerald-600" />
+            <span className="text-xs font-bold text-emerald-700">{product.profitMargin}</span>
+          </div>
         </div>
+
+        {/* Learn More Button - Erdigma Style */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            if (onInquireProduct) {
+              onInquireProduct(product.name);
+            } else {
+              onSelectProduct(product);
+            }
+          }}
+          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full border-2 border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white text-xs font-bold transition-all duration-300 group/btn"
+        >
+          Learn More
+          <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+        </button>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Coffee, Sparkles, Award, Layers } from 'lucide-react';
+import { Coffee, Sparkles } from 'lucide-react';
 import { PRODUCTS } from '../data/franchiseData';
 import { DrinkProduct } from '../types';
 import { ProductModal } from './ProductModal';
@@ -17,14 +17,13 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
   const nonCoffeeProducts = PRODUCTS.filter((p) => p.category === 'non-coffee');
 
   return (
-    <section id="products-catalog" className="py-12 sm:py-16 relative overflow-hidden bg-[#FDF6F0] border-b border-orange-100/60 flex flex-col justify-center items-center">
-      {/* Background Ambient Glows */}
+    <section id="products-catalog" className="py-12 sm:py-16 relative overflow-hidden bg-[#FDF6F0] flex flex-col justify-center items-center">
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-[#FF6B00]/08 blur-3xl rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
         
         {/* Section Header */}
-        <div className="text-center max-w-xl mx-auto space-y-2.5 mb-10 sm:mb-12 flex flex-col items-center justify-center">
+        <div className="text-center max-w-xl mx-auto space-y-2.5 mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold shadow-xs">
             <Coffee className="w-3.5 h-3.5 text-[#FF6B00]" />
             <span>Katalog Varian Produk Java Cafe</span>
@@ -37,11 +36,11 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
           </p>
         </div>
 
-        {/* Section 1: Coffee Series */}
+        {/* Coffee Series */}
         <div className="w-full max-w-6xl mx-auto mb-12 space-y-6">
           <div className="flex items-center justify-between border-b border-orange-200/80 pb-3">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-xl bg-[#FF6B00] text-white flex items-center justify-center shadow-xs font-bold">
+              <div className="w-8 h-8 rounded-xl bg-[#FF6B00] text-white flex items-center justify-center shadow-xs">
                 <Coffee className="w-4 h-4" />
               </div>
               <div>
@@ -54,7 +53,6 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
             </span>
           </div>
 
-          {/* 4-Column Grid for Coffee Series */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
             {coffeeProducts.map((drink) => (
               <ProductCard
@@ -67,11 +65,11 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
           </div>
         </div>
 
-        {/* Section 2: Non-Coffee Series */}
+        {/* Non-Coffee Series */}
         <div className="w-full max-w-6xl mx-auto space-y-6">
           <div className="flex items-center justify-between border-b border-orange-200/80 pb-3">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-xs font-bold">
+              <div className="w-8 h-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-xs">
                 <Sparkles className="w-4 h-4" />
               </div>
               <div>
@@ -84,7 +82,6 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
             </span>
           </div>
 
-          {/* 4-Column Grid for Non-Coffee Series */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
             {nonCoffeeProducts.map((drink) => (
               <ProductCard
@@ -97,17 +94,12 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
           </div>
         </div>
 
-        {/* Product Detail Modal */}
         <ProductModal
           product={activeModalProduct}
           onClose={() => setActiveModalProduct(null)}
           onInquireProduct={onInquireProduct}
         />
-
       </div>
     </section>
   );
 };
-
-
-
