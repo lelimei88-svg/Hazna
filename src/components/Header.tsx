@@ -71,10 +71,9 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onNavigate, onOpenPo
               <span className="text-xl sm:text-2xl font-black tracking-tight leading-none flex items-center gap-1.5">
                 <span className="text-[#1A1A1A] font-black">CV</span>
                 <span className="text-[#FF6B00]">Hazna</span>
-                <span className="text-[#1A1A1A] font-black">Berkah</span>
               </span>
               <span className="text-[10px] font-bold text-gray-700 tracking-widest uppercase mt-1">
-                Barokah Indonesia
+                Berkah Indonesia
               </span>
             </div>
           </button>

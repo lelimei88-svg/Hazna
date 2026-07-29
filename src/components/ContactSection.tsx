@@ -166,7 +166,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialPackage }
                   <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
                   <h4 className="text-lg font-bold text-emerald-900">Formulir Terkirim & Tersimpan di Database!</h4>
                   <p className="text-xs text-emerald-800">
-                    Terima kasih. Pesan Anda telah tersimpan aman di Cloud Firestore database dan tim konsultan CV Hazna Berkah Barokah Indonesia akan segera merespon via email/telepon Anda.
+                    Terima kasih. Pesan Anda telah tersimpan aman di Cloud Firestore database dan tim konsultan CV Hazna Berkah Indonesia akan segera merespon via email/telepon Anda.
                   </p>
                   {docRefId && (
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-100 border border-emerald-300 text-[11px] font-mono text-emerald-900">
