@@ -8,7 +8,6 @@ import {
   EmployeeTestimonial
 } from '../types';
 
-// Main generated image imports or path references
 export const IMAGES = {
   hero: '/src/assets/images/hazna_booth_gerobak_1785122131603.jpg',
   drinksGrid: '/src/assets/images/javacafe_drinks_1785119563570.jpg',
