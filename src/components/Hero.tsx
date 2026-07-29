@@ -29,19 +29,19 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold shadow-xs tracking-wide">
               <span className="w-2 h-2 rounded-full bg-[#FF6B00] animate-pulse" />
-              <span>Tentang CV Hazna Berkah</span>
+              <span>Company Profile</span>
             </div>
 
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1A1A1A] tracking-tight leading-[1.15]">
-                Perusahaan di Bidang F&B{' '}
+                Cv Hazna Berkah{' '}
                 <span className="text-[#FF6B00] block sm:inline">
-                  (Food and Beverage)
+                  Indonesia
                 </span>
               </h1>
 
               <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium leading-relaxed max-w-xl">
-                yang berfokus pada kemitraan usaha minuman melalui brand Java Cafe dan kemitraan waralaba.
+                Perusahaan yang bergerak di bidang (F&B) yang berfokus pada kemitraan usaha minuman melalui brand Java Cafe dan kemitraan waralaba (Franchise).
               </p>
             </div>
 
