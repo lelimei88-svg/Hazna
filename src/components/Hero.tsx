@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Star, ArrowRight, CheckCircle2, Store } from 'lucide-react';
 import { IMAGES } from '../data/franchiseData';
 import heroBoothImg from '../assets/images/javacafe_booth_1785119575726.jpg';
+import BrandSection from './BrandSection';
 
 interface HeroProps {
   onNavigate?: (page: 'home' | 'product' | 'career' | 'gallery' | 'contact') => void;
@@ -125,7 +126,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
   </div>
 </div>
-          
+        <BrandSection />  
         </div>
       </div>
     </section>
