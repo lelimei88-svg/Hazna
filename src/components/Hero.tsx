@@ -34,7 +34,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#1A1A1A] tracking-tight leading-[1.15]">
-                Perusahaan ekosistem bisnis kuliner{' '}
+                Perusahaan Food and Beverage{' '}
                 <span className="text-[#FF6B00] block sm:inline">
                   (F&B)
                 </span>
