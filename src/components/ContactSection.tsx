@@ -283,11 +283,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialPackage }
                     )}
                   </button>
 
-                  <p className="text-[11px] text-gray-500 text-center mt-2 font-medium flex items-center justify-center gap-1">
-                    <Database className="w-3 h-3 text-[#FF6B00]" />
-                    <span>Tersimpan otomatis di Cloud Firestore & Diteruskan ke WhatsApp</span>
-                  </p>
-
                 </form>
               )}
 
