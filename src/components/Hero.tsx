@@ -99,31 +99,32 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           </div>
 
           {/* Right Column - Booth Image */}
-          <div className="relative order-1 lg:order-2 flex items-center justify-center">
-            <div className="relative w-full max-w-2xl">
-              
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white">
-                <img
-                  src={heroImgSrc}
-                  alt="Gerobak Booth Java Cafe - CV Hazna Berkah Barokah Indonesia"
-                  onError={handleHeroImgError}
-                  className="w-full h-auto object-contain"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+<div className="relative order-1 lg:order-2 flex items-center justify-center">
+  <div className="relative w-full max-w-md">  {/* ← UBAH dari max-w-2xl ke max-w-md */}
+    
+    <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white">
+      <img
+        src={heroImgSrc}
+        alt="Gerobak Booth Java Cafe - CV Hazna Berkah Barokah Indonesia"
+        onError={handleHeroImgError}
+        className="w-full h-auto object-contain"
+        referrerPolicy="no-referrer"
+      />
+    </div>
 
-              <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-2 z-10">
-                <div className="w-8 h-8 rounded-lg bg-[#FF6B00] flex items-center justify-center">
-                  <Store className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm font-black text-[#1A1A1A]">Concept Booth</p>
-                  <p className="text-xs text-gray-600 font-bold">Java Cafe Exclusive</p>
-                </div>
-              </div>
+    {/* Badge tetap sama */}
+    <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-2 z-10">
+      <div className="w-8 h-8 rounded-lg bg-[#FF6B00] flex items-center justify-center">
+        <Store className="w-4 h-4 text-white" />
+      </div>
+      <div>
+        <p className="text-sm font-black text-[#1A1A1A]">Concept Booth</p>
+        <p className="text-xs text-gray-600 font-bold">Java Cafe Exclusive</p>
+      </div>
+    </div>
 
-            </div>
-          </div>
+  </div>
+</div>
           
         </div>
       </div>

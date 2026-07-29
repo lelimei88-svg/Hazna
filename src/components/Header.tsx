@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu as MenuIcon, X, ChevronRight, Database } from 'lucide-react';
+import { Menu as MenuIcon, X, ChevronRight, Globe } from 'lucide-react';
 
 interface HeaderProps {
   activePage: 'home' | 'product' | 'career' | 'gallery' | 'contact';
@@ -11,6 +11,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ activePage, onNavigate, onOpenPortal }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [lang, setLang] = useState<'id' | 'en'>('id'); // State untuk bahasa
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,10 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onNavigate, onOpenPo
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleLang = () => {
+    setLang(lang === 'id' ? 'en' : 'id');
+  };
 
   const navLinks: Array<{ name: string; key: 'home' | 'product' | 'career' | 'gallery' | 'contact' }> = [
     { name: 'Home', key: 'home' },
@@ -94,25 +99,26 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onNavigate, onOpenPo
             })}
           </nav>
 
-          {/* Right Action: Partner Portal & Partnership CTA */}
+          {/* Right Action: Language Switcher & Partnership CTA */}
           <div className="hidden sm:flex items-center gap-2.5">
-            {onOpenPortal && (
-              <button
-                onClick={onOpenPortal}
-                className="px-4 py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs tracking-wide shadow-xs hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-1.5 cursor-pointer"
-                title="Partner Database Portal"
-              >
-                <Database className="w-3.5 h-3.5 text-[#FF6B00]" />
-                <span>Partner Portal</span>
-              </button>
-            )}
+            {/* Tombol Ganti Bahasa (Menggantikan Partner Portal) */}
+            <button
+              onClick={toggleLang}
+              className="px-4 py-2.5 rounded-full bg-white/80 hover:bg-white text-slate-900 font-extrabold text-xs tracking-wide border-2 border-slate-900 shadow-xs hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-1.5 cursor-pointer"
+              title="Switch Language"
+            >
+              <Globe className="w-3.5 h-3.5 text-[#FF6B00]" />
+              <span>{lang === 'id' ? 'EN' : 'ID'}</span>
+            </button>
+
+            {/* Tombol Kemitraan / Partnership */}
             <a
               href="https://javacafe.id/kemitraan"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 rounded-full bg-[#FF6B00] hover:bg-[#E05E00] text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-md shadow-orange-500/20 hover:shadow-lg hover:shadow-orange-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer inline-block"
             >
-              Partnership
+              {lang === 'id' ? 'Kemitraan' : 'Partnership'}
             </a>
           </div>
 
@@ -158,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({ activePage, onNavigate, onOpenPo
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full py-3 rounded-full bg-[#FF6B00] hover:bg-[#E05E00] text-white font-extrabold text-sm text-center shadow-md shadow-orange-500/20 block"
               >
-                Partnership
+                {lang === 'id' ? 'Kemitraan' : 'Partnership'}
               </a>
             </div>
           </div>
