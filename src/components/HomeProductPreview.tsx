@@ -25,7 +25,7 @@ const MENU_ITEMS: BeverageMenu[] = [
     description:
       "Harmoni unik antara bubuk matcha premium yang autentik dengan segarnya selai stroberi manis, menciptakan kombinasi rasa yang lembut, menyegarkan, dan estetik.",
     image: strawberryMatchaImg,
-    badge: "Best Seller", // ✅ Tambah badge
+    badge: "New", // ✅ Tambah badge
   },
   {
     id: "Berry Americano",
@@ -33,14 +33,14 @@ const MENU_ITEMS: BeverageMenu[] = [
     description:
       "Inovasi kopi Americano yang kuat dengan sentuhan sirup beri yang segar, memberikan sensasi rasa buah yang berpadu sempurna dengan aroma kopi yang tajam.",
     image: berryAmericanoImg,
-    badge: "Best Seller", // ✅ Tambah badge
+    badge: "New", // ✅ Tambah badge
   },
   {
-    id: "Matcha Choco", // ✅ Fix typo
-    name: "Matcha Choco", // ✅ Fix typo
+    id: "Matcha Choco", 
+    name: "Matcha Choco", 
     description:
       "Perpaduan matcha premium Jepang dengan cokelat yang creamy. Sensasi unik yang menyegarkan dengan lapisan matcha kental dan cokelat lembut.",
-    image: matchaChocoImg, // ✅ Fix typo
+    image: matchaChocoImg, 
     badge: "New", // ✅ Tambah badge
   },
 ];
