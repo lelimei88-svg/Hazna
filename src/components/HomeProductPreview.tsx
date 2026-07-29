@@ -101,7 +101,7 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({
                   className="flex-1 bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group hover:-translate-y-1"
                 >
                   {/* Image Container dengan Background Merah */}
-                  <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center p-6">
+                  <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-white flex items-center justify-center p-6">
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                       <div className="w-40 h-40 bg-white/10 rounded-full blur-2xl" />
                     </div>
