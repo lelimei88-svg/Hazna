@@ -259,7 +259,7 @@ export const TESTIMONIALS: Testimonial[] = [
     city: 'Bandung, Jawa Barat',
     outletName: 'Javacafe Container Dago',
     monthlyRevenue: 'Rp 27.000.000 / bln',
-    quote: 'CV Hazna Berkah Barokah sangat responsif dalam suplai bahan baku. Tidak pernah telat kirim dan ketersediaan powder selalu aman. Sekarang sudah jalan 8 bulan dan berencana buka cabang kedua!',
+    quote: 'CV Hazna Berkah Indonesia sangat responsif dalam suplai bahan baku. Tidak pernah telat kirim dan ketersediaan powder selalu aman. Sekarang sudah jalan 8 bulan dan berencana buka cabang kedua!',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=200'
   },
   {
@@ -280,7 +280,7 @@ export const CAREER_OPENINGS: CareerOpening[] = [
     department: 'Marketing & Digital Media',
     location: 'Head Office Purbalingga',
     type: 'Full-time',
-    description: 'Memproduksi konten kreatif foto/video, mengelola saluran media sosial resmi, dan membangun awareness brand CV Hazna Berkah Barokah Indonesia.',
+    description: 'Memproduksi konten kreatif foto/video, mengelola saluran media sosial resmi, dan membangun awareness brand CV Hazna Berkah Indonesia.',
     qualifications: [
       'Pria atau Wanita',
       'Kreatif, inovatif, dan selalu mengikuti perkembangan tren digital terbaru',
@@ -364,7 +364,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: 'g3',
-    title: 'Kemitraan CV Hazna Berkah Barokah',
+    title: 'Kemitraan CV Hazna Berkah Indonesia',
     category: 'Kemitraan',
     image: IMAGES.entrepreneur,
     caption: 'Para mitra pengusaha muda sukses mengembangkan usaha outlet Javacafe di daerahnya.'
@@ -399,7 +399,7 @@ export const EMPLOYEE_TESTIMONIALS: EmployeeTestimonial[] = [
     role: 'Barista Trainer & R&D Lead',
     years: '3 Tahun di Hazna',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
-    quote: 'Di CV Hazna Berkah Barokah Indonesia, saya diberi ruang penuh berkreasi meracik racikan menu minuman khas yang kini dinikmati oleh ribuan mitra di seluruh Nusantara.'
+    quote: 'Di CV Hazna Berkah Indonesia, saya diberi ruang penuh berkreasi meracik racikan menu minuman khas yang kini dinikmati oleh ribuan mitra di seluruh Nusantara.'
   },
   {
     id: 'emp-2',
@@ -446,7 +446,7 @@ export const EMPLOYEE_TESTIMONIALS: EmployeeTestimonial[] = [
 export const karyawanData = EMPLOYEE_TESTIMONIALS;
 
 export const COMPANY_INFO = {
-  name: 'CV Hazna Berkah Barokah Indonesia',
+  name: 'CV Hazna Berkah Indonesia',
   brandName: 'Hazna Berkah',
   tagline: 'Mitra Strategis Ekosistem Bisnis Kuliner Indonesia',
   whatsappNumber: '6285135990588',
@@ -457,6 +457,6 @@ export const COMPANY_INFO = {
   socials: {
     instagram: '@haznaberkah.official',
     tiktok: '@haznaberkah.indonesia',
-    facebook: 'CV Hazna Berkah Barokah Indonesia Official'
+    facebook: 'CV Hazna Berkah Indonesia Official'
   }
 };

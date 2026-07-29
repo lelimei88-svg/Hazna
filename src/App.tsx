@@ -21,17 +21,17 @@ function AppContent() {
   const handleOpenWhatsApp = (customMsg?: string) => {
     const text = encodeURIComponent(
       customMsg ||
-        'Halo CV Hazna Berkah Barokah Indonesia, saya berminat konsultasi kemitraan. Mohon info selengkapnya.'
+        'Halo CV Hazna Berkah Indonesia, saya berminat konsultasi kemitraan. Mohon info selengkapnya.'
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
 
   const handleInquireProduct = (productName: string) => {
-    handleOpenWhatsApp(`Halo CV Hazna Berkah Barokah, saya tertarik dengan varian menu ${productName}. Mohon info resep & bahan bakunya.`);
+    handleOpenWhatsApp(`Halo CV Hazna Berkah Indonesia, saya tertarik dengan varian menu ${productName}. Mohon info resep & bahan bakunya.`);
   };
 
   const handleApplyCareer = (positionTitle: string) => {
-    handleOpenWhatsApp(`Halo HRD CV Hazna Berkah Barokah, saya tertarik melamar untuk posisi ${positionTitle}. Mohon petunjuk pengiriman dokumen CV & portofolio.`);
+    handleOpenWhatsApp(`Halo HRD CV Hazna Berkah Indonesia, saya tertarik melamar untuk posisi ${positionTitle}. Mohon petunjuk pengiriman dokumen CV & portofolio.`);
   };
 
   return (
