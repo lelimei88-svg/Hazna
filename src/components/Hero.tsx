@@ -105,7 +105,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
     <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white">
       <img
         src={heroImgSrc}
-        alt="Gerobak Booth Java Cafe - CV Hazna Berkah Barokah Indonesia"
+        alt="Gerobak Booth Java Cafe - CV Hazna Berkah Indonesia"
         onError={handleHeroImgError}
         className="w-full h-auto object-contain"
         referrerPolicy="no-referrer"

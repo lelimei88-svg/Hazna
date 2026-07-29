@@ -18,7 +18,7 @@ export const FranchisePackages: React.FC<FranchisePackagesProps> = ({ onSelectPa
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-amber-900/10 text-xs font-bold text-[#4A3B35] shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#FF9F73]" />
-            Paket Kemitraan CV Hazna Berkah Barokah
+            Paket Kemitraan CV Hazna Berkah Indonesia
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#4A3B35] tracking-tight">
             Pilihan Paket Kemitraan{' '}

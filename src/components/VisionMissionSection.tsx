@@ -16,7 +16,7 @@ export const VisionMissionSection: React.FC = () => {
             Komitmen Operasional <span className="text-[#FF6B00]">Hazna Berkah</span>
           </h2>
           <p className="text-xs sm:text-sm text-gray-700 font-medium leading-relaxed max-w-lg">
-            Pondasi dan komitmen operasional CV Hazna Berkah Barokah Indonesia dalam membangun bisnis berkelanjutan.
+            Pondasi dan komitmen operasional CV Hazna Berkah Indonesia dalam membangun bisnis berkelanjutan.
           </p>
         </div>
 

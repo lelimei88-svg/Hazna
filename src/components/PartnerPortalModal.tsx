@@ -76,7 +76,7 @@ export const PartnerPortalModal: React.FC<PartnerPortalModalProps> = ({ isOpen, 
                 </span>
               </div>
               <p className="text-xs text-gray-300">
-                Sistem database real-time CV Hazna Berkah Barokah Indonesia
+                Sistem database real-time CV Hazna Berkah Indonesia
               </p>
             </div>
           </div>

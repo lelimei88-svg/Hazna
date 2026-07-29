@@ -48,7 +48,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialPackage }
     }
 
     // Format WhatsApp message URL
-    const text = `Halo Konsultan CV Hazna Berkah Barokah,\n\nNama: ${formData.name}\nWhatsApp: ${formData.whatsapp}\nEmail/Kontak: ${formData.city}\nPeminatan Paket: ${formData.packageInterest}\nPesan/Pertanyaan: ${formData.message || '-'}\n\nMohon info proposal lengkap kemitraan Javacafe.`;
+    const text = `Halo Konsultan CV Hazna Berkah,\n\nNama: ${formData.name}\nWhatsApp: ${formData.whatsapp}\nEmail/Kontak: ${formData.city}\nPeminatan Paket: ${formData.packageInterest}\nPesan/Pertanyaan: ${formData.message || '-'}\n\nMohon info proposal lengkap kemitraan Javacafe.`;
     
     const encodedText = encodeURIComponent(text);
     const waUrl = `https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${encodedText}`;
@@ -72,7 +72,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialPackage }
             Mulai Diskusi Kemitraan Bersama <span className="text-[#FF6B00]">Hazna Berkah Indonesia</span>
           </h2>
           <p className="text-xs sm:text-sm text-gray-700 font-medium leading-relaxed max-w-lg">
-            Tim konsultan bisnis CV Hazna Berkah Barokah Indonesia siap memberikan informasi lengkap seputar skema kemitraan, analisis kelayakan lokasi, hingga estimasi ROI.
+            Tim konsultan bisnis CV Hazna Berkah Indonesia siap memberikan informasi lengkap seputar skema kemitraan, analisis kelayakan lokasi, hingga estimasi ROI.
           </p>
         </div>
 

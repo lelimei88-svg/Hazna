@@ -153,7 +153,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
             Margin 60% – 70%
           </p>
           <p className="text-base text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            CV Hazna Berkah Barokah Indonesia menghadirkan 8 pilihan varian menu terlaris Java Cafe dengan racikan kualitas kafe premium dan HPP super hemat.
+            CV Hazna Berkah Indonesia menghadirkan 8 pilihan varian menu terlaris Java Cafe dengan racikan kualitas kafe premium dan HPP super hemat.
           </p>
         </div>
       </div>

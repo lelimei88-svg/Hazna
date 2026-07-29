@@ -17,7 +17,7 @@ export const TestimonialsSection: React.FC = () => {
             Kisah Sukses <span className="text-[#FF6B00]">Mitra Hazna</span>
           </h2>
           <p className="text-xs sm:text-sm text-gray-700 font-medium leading-relaxed max-w-lg">
-            Dengarkan langsung cerita nyata dari mitra pengusaha yang telah menikmati hasil bisnis waralaba CV Hazna Berkah Barokah Indonesia.
+            Dengarkan langsung cerita nyata dari mitra pengusaha yang telah menikmati hasil bisnis waralaba CV Hazna Berkah Indonesia.
           </p>
         </div>
 

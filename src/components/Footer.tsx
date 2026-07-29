@@ -43,7 +43,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   <span>Berkah</span>
                 </span>
                 <span className="text-[10px] font-bold text-gray-400 tracking-widest uppercase mt-1">
-                  Barokah Indonesia
+                  Indonesia
                 </span>
               </div>
             </div>
@@ -113,7 +113,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <p className="text-center sm:text-left">
-            © 2026 CV Hazna Berkah Barokah Indonesia. All rights reserved.
+            © 2026 CV Hazna Berkah Indonesia. All rights reserved.
           </p>
 
           <button

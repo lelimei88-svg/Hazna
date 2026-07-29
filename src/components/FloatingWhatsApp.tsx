@@ -5,7 +5,7 @@ import { COMPANY_INFO } from '../data/franchiseData';
 export const FloatingWhatsApp: React.FC = () => {
   const handleClick = () => {
     const text = encodeURIComponent(
-      'Halo CV Hazna Berkah Barokah Indonesia, saya tertarik konsultasi program Kemitraan. Mohon info selengkapnya.'
+      'Halo CV Hazna Berkah Indonesia, saya tertarik konsultasi program Kemitraan. Mohon info selengkapnya.'
     );
     window.open(`https://wa.me/${COMPANY_INFO.whatsappNumber}?text=${text}`, '_blank');
   };
