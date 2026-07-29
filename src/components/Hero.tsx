@@ -122,13 +122,15 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               </div>
 
               {/* Main Booth Image */}
-              <img
-                src={heroImgSrc}
-                alt="Gerobak Booth Java Cafe - CV Hazna Berkah Barokah Indonesia"
-                onError={handleHeroImgError}
-                className="w-full h-full object-contain filter drop-shadow-xl hover:scale-102 transition-transform duration-500 rounded-2xl"
-                referrerPolicy="no-referrer"
-              />
+<div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-orange-50 to-orange-100 p-6 shadow-2xl border-4 border-white">
+  <img
+    src={heroImgSrc}
+    alt="Gerobak Booth Java Cafe - CV Hazna Berkah Barokah Indonesia"
+    onError={handleHeroImgError}
+    className="w-full h-full object-contain filter drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+    referrerPolicy="no-referrer"
+  />
+</div>
 
             </div>
 
