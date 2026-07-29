@@ -71,10 +71,6 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#1A1A1A] tracking-tight">
             Menu Minuman <span className="text-[#FF6B00]">Terbaru</span>
           </h2>
-          <p className="text-xs sm:text-sm text-gray-700 font-medium leading-relaxed max-w-lg">
-            Rasakan sensasi otentik racikan minuman khas Java Cafe. Setiap
-            tegukan adalah perpaduan sempurna dari bahan pilihan.
-          </p>
         </div>
 
         {/* Carousel Container dengan Arrow */}
