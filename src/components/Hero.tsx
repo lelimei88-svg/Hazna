@@ -12,6 +12,7 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   const [heroImgSrc, setHeroImgSrc] = useState<string>(heroBoothImg);
 
+  // Fallback to high quality booth image if local path is unavailable in preview
   const handleHeroImgError = () => {
     setHeroImgSrc('');
   };
@@ -26,13 +27,13 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         {/* 2-Column Responsive Grid System */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center w-full">
           
-          {/* Left Column (Corporate Info & CTAs) */}
+          {/* Left Column (Corporate Info & CTAs): Order 2 on Mobile, Order 1 on Desktop */}
           <div className="w-full flex flex-col items-center md:items-start text-center md:text-left space-y-6 order-2 md:order-1 mt-6 md:mt-0">
             
             {/* Corporate Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold shadow-xs tracking-wide">
               <span className="w-2 h-2 rounded-full bg-[#FF6B00] animate-pulse" />
-              <span>Tentang CV Hazna Berkah</span>
+              <span>Tentang CV Hazna Berkah </span>
             </div>
 
             {/* Headlines & Corporate Description */}
@@ -61,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               </span>
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-orange-200/90 bg-white/80 text-gray-800 shadow-2xs backdrop-blur-xs">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#FF6B00]" />
-                Profit Margin Hingga 70%
+                 Profit Margin Hingga 70%
               </span>
             </div>
 
@@ -105,37 +106,43 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
           </div>
 
-          {/* RIGHT COLUMN - Booth Image Besar & Jelas */}
-          <div className="relative order-1 lg:order-2 flex items-center justify-center">
-            <div className="relative w-full max-w-2xl">
+          {/* Right Column (Visual Booth Image): Clean Focal Point */}
+          <div className="w-full max-w-lg md:max-w-xl mx-auto relative order-1 md:order-2 flex flex-col items-center justify-center">
+            
+            {/* Booth Image Container */}
+            <div className="relative w-full aspect-4/3 flex items-center justify-center p-2 rounded-2xl bg-transparent">
               
-              {/* Main Image - BESAR & JELAS */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white">
-                <img
-                  src={heroImgSrc}
-                  alt="Gerobak Booth Java Cafe - CV Hazna Berkah Barokah Indonesia"
-                  onError={handleHeroImgError}
-                  className="w-full h-auto object-contain"
-                  referrerPolicy="no-referrer"
-                />
+              {/* Top Badge: Concept Booth Java Cafe */}
+              <div className="absolute -top-3 left-2 sm:left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 sm:py-2 rounded-2xl border border-orange-200/90 shadow-lg flex items-center gap-2 z-20 text-gray-900">
+                <Store className="w-4 h-4 text-[#FF6B00] shrink-0" />
+                <div>
+                  <p className="text-xs font-black text-[#1A1A1A]">Concept Booth Java Cafe</p>
+                  <p className="text-[10px] text-gray-500 font-bold">Gerobak Container Eksklusif</p>
+                </div>
               </div>
 
-              {/* Badge - Top Left */}
-              <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-2 z-10">
-                <div className="w-8 h-8 rounded-lg bg-[#FF6B00] flex items-center justify-center">
-                  <Store className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm font-black text-[#1A1A1A]">Concept Booth</p>
-                  <p className="text-xs text-gray-600 font-bold">Java Cafe Exclusive</p>
-                </div>
-              </div>
+              {/* Main Booth Image */}
+<div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-orange-50 to-orange-100 p-6 shadow-2xl border-4 border-white">
+  <img
+    src={heroImgSrc}
+    alt="Gerobak Booth Java Cafe - CV Hazna Berkah Barokah Indonesia"
+    onError={handleHeroImgError}
+    className="w-full h-full object-contain filter drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+    referrerPolicy="no-referrer"
+  />
+</div>
 
             </div>
+
           </div>
-          
-        </div> {/* ← Menutup grid */}
-      </div>   {/* ← Menutup max-w-7xl */}
+
+        </div>
+      </div>
     </section>
   );
 };
+
+
+
+
+
