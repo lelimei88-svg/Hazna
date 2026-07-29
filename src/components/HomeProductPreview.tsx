@@ -15,7 +15,6 @@ interface BeverageMenu {
   name: string;
   description: string;
   image: string;
-  badge?: string; // ✅ Tambah field badge
 }
 
 const MENU_ITEMS: BeverageMenu[] = [
@@ -25,7 +24,6 @@ const MENU_ITEMS: BeverageMenu[] = [
     description:
       "Harmoni unik antara bubuk matcha premium yang autentik dengan segarnya selai stroberi manis, menciptakan kombinasi rasa yang lembut, menyegarkan, dan estetik.",
     image: strawberryMatchaImg,
-    badge: "New", // ✅ Tambah badge
   },
   {
     id: "Berry Americano",
@@ -33,7 +31,6 @@ const MENU_ITEMS: BeverageMenu[] = [
     description:
       "Inovasi kopi Americano yang kuat dengan sentuhan sirup beri yang segar, memberikan sensasi rasa buah yang berpadu sempurna dengan aroma kopi yang tajam.",
     image: berryAmericanoImg,
-    badge: "New", // ✅ Tambah badge
   },
   {
     id: "Matcha Choco", 
@@ -41,7 +38,6 @@ const MENU_ITEMS: BeverageMenu[] = [
     description:
       "Perpaduan matcha premium Jepang dengan cokelat yang creamy. Sensasi unik yang menyegarkan dengan lapisan matcha kental dan cokelat lembut.",
     image: matchaChocoImg, 
-    badge: "New", // ✅ Tambah badge
   },
 ];
 
@@ -112,14 +108,6 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({
                       className="relative z-10 w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                     />
-
-                    {item.badge && (
-                      <div className="absolute top-3 right-3 bg-white/95 text-red-600 text-[9px] font-bold px-2 py-1 rounded-full shadow-sm flex items-center gap-1 z-20">
-                        <Sparkles className="w-2.5 h-2.5" />
-                        <span>{item.badge}</span>
-                      </div>
-                    )}
-                  </div>
 
                   <h3 className="text-base font-bold text-gray-900 mb-2">
                     {item.name}

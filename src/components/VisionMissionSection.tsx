@@ -13,11 +13,8 @@ export const VisionMissionSection: React.FC = () => {
             <span>Visi & Misi Perusahaan</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#1A1A1A] tracking-tight">
-            Komitmen Operasional <span className="text-[#FF6B00]">Hazna Berkah</span>
+            Komitmen Operasional <span className="text-[#FF6B00]">CvHazna</span>
           </h2>
-          <p className="text-xs sm:text-sm text-gray-700 font-medium leading-relaxed max-w-lg">
-            Pondasi dan komitmen operasional CV Hazna Berkah Indonesia dalam membangun bisnis berkelanjutan.
-          </p>
         </div>
 
         {/* Vision & Mission Cards Grid - Directly on Cream Canvas */}
@@ -30,9 +27,6 @@ export const VisionMissionSection: React.FC = () => {
               <div className="w-12 h-12 rounded-2xl bg-slate-900 text-[#FF6B00] flex items-center justify-center font-black mb-5 shadow-xs">
                 <Target className="w-6 h-6" />
               </div>
-              <span className="text-xs font-extrabold text-[#FF6B00] uppercase tracking-wider block mb-1">
-                Arah Masa Depan
-              </span>
               <h3 className="text-2xl font-black text-[#1A1A1A] mb-4">Visi Perusahaan</h3>
               <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-normal">
                 "Menjadi entitas penyedia ekosistem bisnis kuliner terdepan, terpercaya, dan berkelanjutan di Indonesia yang secara konsisten melahirkan wirausahawan mandiri dan berdaya saing tinggi."
@@ -52,9 +46,6 @@ export const VisionMissionSection: React.FC = () => {
               <div className="w-12 h-12 rounded-2xl bg-[#FF6B00] text-white flex items-center justify-center font-black mb-5 shadow-xs">
                 <Rocket className="w-6 h-6" />
               </div>
-              <span className="text-xs font-extrabold text-[#FF6B00] uppercase tracking-wider block mb-1">
-                Langkah Eksekusi
-              </span>
               <h3 className="text-2xl font-black text-[#1A1A1A] mb-4">Misi Strategis</h3>
               <ul className="space-y-3 text-xs sm:text-sm text-gray-800 font-medium">
                 <li className="flex items-start gap-2.5">
