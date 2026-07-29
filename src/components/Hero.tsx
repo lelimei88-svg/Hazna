@@ -10,7 +10,7 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
-  const [heroImgSrc, setHeroImgSrc] = useState<string>(IMAGES.hero);
+  const [heroImgSrc, setHeroImgSrc] = useState<string>(heroBoothImg);
 
   // Fallback to high quality booth image if local path is unavailable in preview
   const handleHeroImgError = () => {
