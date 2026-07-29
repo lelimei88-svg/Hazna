@@ -4,9 +4,9 @@ import rumaImg from '../assets/images/RUMAlogo.jpg';
 import javaImg from '../assets/images/logoJavaCafe.jpg';
 // Data logo brand yang dikelola
 const managedBrands = [
-  { name: 'Machiro', src: '/LogoMachiro.png', width: 'w-24' },
-  { name: 'Ruma', src: '/RUMAlogo.jpg', width: 'w-20' },
-  { name: 'Javacafe', src: '/logoJavaCafe.jpg', width: 'w-20' },
+  { name: 'Machiro', src: machiroImg, width: 'w-24' },
+  { name: 'Ruma', src: rumaImg, width: 'w-20' },
+  { name: 'Javacafe', src: javaImg, width: 'w-20' },
 ];
 
 export default function BrandSection() {
