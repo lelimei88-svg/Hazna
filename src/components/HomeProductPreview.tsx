@@ -134,7 +134,7 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({
                       onNavigate("product");
                       window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
-                    className="inline-flex items-center gap-1 px-4 py-2 rounded-full border border-red-500 text-red-500 hover:bg-red-500 hover:text-white text-xs font-semibold transition-all cursor-pointer group/btn"
+                    className="inline-flex items-center gap-1 px-4 py-2 rounded-full border border-[#FF6B00] text-[#FF6B00] hover:bg-[#FF6B00] hover:text-white text-xs font-semibold transition-all cursor-pointer group/btn"
                   >
                     <span>Learn More</span>
                     <ChevronRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
@@ -161,7 +161,7 @@ export const HomeProductPreview: React.FC<HomeProductPreviewProps> = ({
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-2 h-2 rounded-full transition-all cursor-pointer ${
-                index === currentIndex ? "bg-red-500 w-6" : "bg-gray-300"
+                index === currentIndex ? "bg-[#FF6B00] w-6" : "bg-gray-300"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
