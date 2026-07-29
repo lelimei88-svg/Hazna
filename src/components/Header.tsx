@@ -1,5 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Menu as MenuIcon, X, ChevronRight, Database, ShieldCheck } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { Globe } from 'lucide-react'; // Tambah icon globe
+
+// Di dalam component:
+const { language, setLanguage, t } = useLanguage();
+
+// Tambah tombol language switcher:
+<button
+  onClick={() => setLanguage(language === 'id' ? 'en' : 'id')}
+  className="px-3 py-2 rounded-full bg-white/80 hover:bg-white text-xs font-bold border border-gray-200 transition-all flex items-center gap-1.5"
+>
+  <Globe className="w-3.5 h-3.5 text-[#FF6B00]" />
+  {language === 'id' ? 'EN' : 'ID'}
+</button>
 
 interface HeaderProps {
   activePage: 'home' | 'product' | 'career' | 'gallery' | 'contact';
