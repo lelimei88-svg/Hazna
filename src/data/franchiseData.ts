@@ -9,21 +9,21 @@ import {
 } from '../types';
 
 export const IMAGES = {
-  hero: '/src/assets/images/hazna_booth_gerobak_1785122131603.jpg',
+  hero: '/src/assets/images/javacafe_booth_1785119575726-removebg-preview.jpg',
   drinksGrid: '/src/assets/images/javacafe_drinks_1785119563570.jpg',
-  boothContainer: '/src/assets/images/javacafe_booth_1785119575726.jpg',
+  boothContainer: '/src/assets/images/javacafe_booth_1785119575726-removebg-preview.jpg',
   entrepreneur: '/src/assets/images/javacafe_entrepreneur_1785119591826.jpg',
   consultation: '/src/assets/images/javacafe_entrepreneur_1785119591826.jpg',
 
   produk: {
-    americano: '/assets/images/americano.jpg',
-    cafeLatte: '/assets/images/cafe-latte.jpg',
-    jamilo: '/assets/images/jamilo.jpg',
-    lemonade: '/assets/images/lemonade.jpg',
-    matcha: '/assets/images/matcha.jpg',
-    matchaCoco: '/assets/images/matcha-coco.jpg',
-    milo: '/assets/images/milo.jpg',
-    cappuccinoAssassino: '/assets/images/cappuccino-assassino.jpg', // Pastikan file ini ada di folder
+    americano: '/src/assets/images/americano.jpg',
+    cafeLatte: '/src/assets/images/cafe-latte.jpg',
+    jamilo: '/src/assets/images/jamilo.jpg',
+    lemonade: '/src/assets/images/lemonade.jpg',
+    matcha: '/src/assets/images/matcha.jpg',
+    matchaCoco: '/src/assets/images/matcha-coco.jpg',
+    milo: '/src/assets/images/milo.jpg',
+    cappuccinoAssassino: '/src/assets/images/cappuccino-assassino.jpg', // Pastikan file ini ada di folder
   }
 };
 
@@ -66,8 +66,7 @@ export const PRODUCTS: DrinkProduct[] = [
     categoryLabel: 'Coffee Series',
     shortDescription: 'Espresso lembut yang berpadu sempurna dengan kehangatan susu manis murni.',
     fullDescription: 'Racikan khas Café Latte Javacafe memadukan double shot espresso pilihan dengan steamed milk gurih dan rasa manis yang seimbang. Favorit penikmat kopi sehari-hari.',
-    image: '/images/cafe-latte.jpg',
-    imageSrc: '/images/cafe-latte.jpg',
+    image: IMAGES.cafeLatte,
     isBestSeller: true,
     flavorNotes: ['Espresso Blend', 'Fresh Milk', 'Smooth & Creamy']
   },
@@ -78,8 +77,7 @@ export const PRODUCTS: DrinkProduct[] = [
     categoryLabel: 'Coffee Series',
     shortDescription: 'Resep khas Javacafe perpaduan kopi espresso kental dengan rasa legit malty creamy.',
     fullDescription: 'Perpaduan eksklusif Javacafe antara espresso kental khas Indonesia dengan sentuhan manis malty cokelat cream yang kaya rasa dan bikin nagih.',
-    image: '/images/jamilo.jpg',
-    imageSrc: '/images/jamilo.jpg',
+    image: IMAGES.jamilo,
     isBestSeller: true,
     flavorNotes: ['Malty Espresso', 'Creamy Milk', 'Caramelized Sugar']
   },
@@ -90,8 +88,7 @@ export const PRODUCTS: DrinkProduct[] = [
     categoryLabel: 'Coffee Series',
     shortDescription: 'Kenikmatan espresso murni klasik beraroma mantap dengan kesegaran es batu.',
     fullDescription: 'Seduhan espresso murni dari biji kopi pilihan dengan karakter bold dan aroma khas yang sangat menyegarkan di cuaca panas.',
-    image: '/images/americano.jpg',
-    imageSrc: '/images/americano.jpg',
+    image: IMAGES.americano,
     isBestSeller: false,
     flavorNotes: ['Bold Espresso', 'Rich Aroma', 'Clean Aftertaste']
   },
@@ -102,8 +99,7 @@ export const PRODUCTS: DrinkProduct[] = [
     categoryLabel: 'Coffee Series',
     shortDescription: 'Cappuccino kental racikan rahasia Javacafe dengan rasa kuat nan menggugah selera.',
     fullDescription: 'Racikan cappuccino spesial ala ninja assassin Javacafe dengan rasa kopi yang ekstra mantap, foam melimpah, dan aroma manis yang menggugah energi.',
-    image: '/images/cappuccino-assassino.jpg',
-    imageSrc: '/images/cappuccino-assassino.jpg',
+    image: IMAGES.cappuccinoAssassino,
     isBestSeller: true,
     flavorNotes: ['Extra Espresso', 'Velvety Foam', 'Cocoa Dust']
   },
@@ -114,8 +110,7 @@ export const PRODUCTS: DrinkProduct[] = [
     categoryLabel: 'Non-Coffee Series',
     shortDescription: 'Minuman cokelat malt Milo dingin dengan rasa manis legendaris yang kaya energi.',
     fullDescription: 'Olahan cokelat malt Milo legendaris yang dikocok dingin dengan racikan susu murni khas Javacafe dan taburan Milo bubuk renyah di atasnya.',
-    image: '/images/milo.jpg',
-    imageSrc: '/images/milo.jpg',
+    image: IMAGES.milo,
     isBestSeller: true,
     flavorNotes: ['Chocolate Malt', 'Creamy Milk', 'Crunchy Milo Powder']
   },
@@ -126,8 +121,7 @@ export const PRODUCTS: DrinkProduct[] = [
     categoryLabel: 'Non-Coffee Series',
     shortDescription: 'Kesegaran perasan lemon alami yang asam manis dingin menyegarkan dahaga.',
     fullDescription: 'Perasan buah lemon asli dipadukan dengan gula tebu murni dan es batu dingin. Pilihan tepat pemuas dahaga yang kaya vitamin C dan menyegarkan.',
-    image: '/images/lemonade.jpg',
-    imageSrc: '/images/lemonade.jpg',
+    image: IMAGES.lemonade,
     isBestSeller: false,
     flavorNotes: ['Fresh Lemon Juice', 'Cane Sugar', 'Refreshing Ice']
   },
@@ -138,8 +132,7 @@ export const PRODUCTS: DrinkProduct[] = [
     categoryLabel: 'Non-Coffee Series',
     shortDescription: 'Perpaduan sempurna matcha Jepang otentik di atas base gurih air kelapa & susu.',
     fullDescription: 'Inovasi minuman dua lapis antara Uji Matcha otentik Jepang dengan rasa gurih alami air kelapa dan susu dingin. Unik, mewah, dan sangat diminati.',
-    image: '/images/matcha-coco.jpg',
-    imageSrc: '/images/matcha-coco.jpg',
+    image: IMAGES.matchaCoco,
     isBestSeller: true,
     flavorNotes: ['Uji Matcha', 'Fresh Coconut Water', 'Creamy Milk Layer']
   },
@@ -150,8 +143,7 @@ export const PRODUCTS: DrinkProduct[] = [
     categoryLabel: 'Non-Coffee Series',
     shortDescription: 'Racikan matcha hijau murni otentik nan lembut beraroma khas menenangkan.',
     fullDescription: 'Matcha latte klasik dengan bubuk matcha Jepang berkualitas tinggi, dipadu susu segar dingin yang memberikan tekstur lembut dan aroma khas green tea.',
-    image: '/images/matcha.jpg',
-    imageSrc: '/images/matcha.jpg',
+    image: IMAGES.matcha,
     isBestSeller: false,
     flavorNotes: ['Japanese Matcha', 'Full Cream Milk', 'Earthy & Sweet']
   }
