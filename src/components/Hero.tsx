@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Star, ArrowRight, CheckCircle2, Store } from 'lucide-react';
 import { IMAGES } from '../data/franchiseData';
-import heroBoothImg from '../assets/images/javacafe_booth_1785119575726-removebg-preview.jpg';
+import heroBoothImg from '../assets/images/javacafe_booth_1785119575726-removebg-preview.png';
 
 interface HeroProps {
   onNavigate?: (page: 'home' | 'product' | 'career' | 'gallery' | 'contact') => void;
