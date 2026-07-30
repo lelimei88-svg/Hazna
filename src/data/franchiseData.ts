@@ -16,14 +16,14 @@ export const IMAGES = {
   consultation: '/src/assets/images/javacafe_entrepreneur_1785119591826.jpg',
 
   produk: {
-    americano: '/src/assets/images/americano.jpg',
-    cafeLatte: '/src/assets/images/cafe-latte.jpg',
-    jamilo: '/src/assets/images/jamilo.jpg',
-    lemonade: '/src/assets/images/lemonade.jpg',
-    matcha: '/src/assets/images/matcha.jpg',
-    matchaCoco: '/src/assets/images/matcha-coco.jpg',
-    milo: '/src/assets/images/milo.jpg',
-    cappuccinoAssassino: '/src/assets/images/cappuccino-assassino.jpg', // Pastikan file ini ada di folder
+    americano: '/images/americano.jpg',
+    cafeLatte: '/images/cafe-latte.jpg',
+    jamilo: '/images/jamilo.jpg',
+    lemonade: '/images/lemonade.jpg',
+    matcha: '/images/matcha.jpg',
+    matchaCoco: '/images/matcha-coco.jpg',
+    milo: '/images/milo.jpg',
+    cappuccinoAssassino: '/images/cappuccino-assassino.jpg', // Pastikan file ini ada di folder
   }
 };
 
@@ -243,7 +243,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 't3',
-    name: 'Budi Santoso',
+    name: 'Luna Angela',
     city: 'Semarang, Jawa Tengah',
     outletName: 'Javacafe Teras Minimarket',
     monthlyRevenue: 'Rp 21.200.000 / bln',
@@ -377,7 +377,7 @@ export const EMPLOYEE_TESTIMONIALS: EmployeeTestimonial[] = [
     name: 'Budi Santoso',
     role: 'Barista Trainer & R&D Lead',
     years: '3 Tahun di Hazna',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+    image: 
     quote: 'Di CV Hazna Berkah Indonesia, saya diberi ruang penuh berkreasi meracik racikan menu minuman khas yang kini dinikmati oleh ribuan mitra di seluruh Nusantara.'
   },
   {
@@ -385,7 +385,7 @@ export const EMPLOYEE_TESTIMONIALS: EmployeeTestimonial[] = [
     name: 'Amanda Putri',
     role: 'Content Creator & Marketing',
     years: '2 Tahun di Hazna',
-    image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80',
+    image: 
     quote: 'Budaya kerja di Hazna sangat inklusif, dinamis, dan saling mendukung. Setiap ide kampanye kreatif selalu diapresiasi dan dieksekusi dengan cepat.'
   },
   {
@@ -393,7 +393,7 @@ export const EMPLOYEE_TESTIMONIALS: EmployeeTestimonial[] = [
     name: 'Rizky Firmansyah',
     role: 'Supervisor Kemitraan',
     years: '4 Tahun di Hazna',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
+    image: 
     quote: 'Kebanggaan terbesar saya adalah mendampingi para wirausahawan lokal dari nol hingga sukses mengoperasikan gerobak container Hazna yang konsisten profit.'
   },
   {
@@ -401,7 +401,7 @@ export const EMPLOYEE_TESTIMONIALS: EmployeeTestimonial[] = [
     name: 'Siti Rahmawati',
     role: 'Quality Assurance Lead',
     years: '2 Tahun di Hazna',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
+    image: 
     quote: 'Sistem manajemen mutu dan standarisasi rasa di Hazna dijaga secara konsisten. Sangat bangga menjadi bagian dari tim yang mengutamakan higienitas & rasa terbaik.'
   },
   {
@@ -409,7 +409,7 @@ export const EMPLOYEE_TESTIMONIALS: EmployeeTestimonial[] = [
     name: 'Hendra Wijaya',
     role: 'Head of Franchise Support',
     years: '3.5 Tahun di Hazna',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
+    image: 
     quote: 'Kami memprioritaskan kepuasan dan kemudahan para mitra. Layanan konsultasi 24/7 dan pendampingan lapangan komprehensif adalah kunci sukses bersama.'
   },
   {
@@ -417,7 +417,7 @@ export const EMPLOYEE_TESTIMONIALS: EmployeeTestimonial[] = [
     name: 'Maya Rosita',
     role: 'Human Capital Officer',
     years: '2.5 Tahun di Hazna',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
+    image: 
     quote: 'Lingkungan kerja yang profesional dan transparan membuat seluruh tim bersemangat untuk terus berkembang, belajar hal baru, dan memberikan kontribusi terbaik.'
   }
 ];
