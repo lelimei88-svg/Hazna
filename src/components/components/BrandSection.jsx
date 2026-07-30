@@ -1,0 +1,37 @@
+import React from 'react';
+
+// Data logo brand yang dikelola
+const managedBrands = [
+  { name: 'Machiro', src: '/LogoMachiro.png', width: 'w-24' },
+  { name: 'Ruma', src: '/RUMAlogo.jpg', width: 'w-20' },
+  { name: 'Javacafe', src: '/logoJavaCafe.jpg', width: 'w-20' },
+];
+
+export default function BrandSection() {
+  return (
+    <section className="w-full bg-white py-10 border-b border-gray-100">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <p className="text-sm font-semibold text-gray-500 mb-8 uppercase tracking-widest">
+          Brand yang Kami Kelola
+        </p>
+        
+        {/* Container Flexbox untuk logo */}
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+          {managedBrands.map((brand) => (
+            <div 
+              key={brand.name} 
+              className={`relative ${brand.width} opacity-70 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300`}
+            >
+              <img 
+                src={brand.src} 
+                alt={brand.name} 
+                className="w-full h-auto object-contain"
+                draggable={false}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

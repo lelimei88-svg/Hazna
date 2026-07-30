@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ChevronRight, ChevronLeft, Sparkles, Coffee } from "lucide-react";
 import strawberryMatchaImg from "../assets/images/stawberry_matcha_latte-removebg-preview.png";
 import berryAmericanoImg from "../assets/images/berry_americano-removebg-preview.png";
-import matchaChocoImg from "../assets/images/mactha_choco-removebg-preview.png";
+import matchaChocoImg from "../assets/images/matcha_choco-removebg-preview.png";
 import BrandSection from './BrandSection';
 
 interface HomeProductPreviewProps {
