@@ -81,31 +81,6 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
                   {product.longDescription || product.shortDescription}
                 </p>
 
-                {/* Price & Margin */}
-                <div className="flex flex-wrap items-center gap-6 pt-4">
-                  <div>
-                    <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Harga Jual</p>
-                    <p className="text-3xl font-black text-[#1A1A1A]">{product.price}</p>
-                  </div>
-                  <div className="h-14 w-px bg-gray-300 hidden sm:block" />
-                  <div>
-                    <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Margin Profit</p>
-                    <div className="flex items-center gap-2">
-                      <TrendingUp className="w-6 h-6 text-emerald-600" />
-                      <p className="text-3xl font-black text-emerald-600">{product.profitMargin}</p>
-                    </div>
-                  </div>
-                  {product.hpp && (
-                    <>
-                      <div className="h-14 w-px bg-gray-300 hidden sm:block" />
-                      <div>
-                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">HPP</p>
-                        <p className="text-3xl font-black text-[#1A1A1A]">{product.hpp}</p>
-                      </div>
-                    </>
-                  )}
-                </div>
-
                 {/* Ingredients */}
                 {product.ingredients && product.ingredients.length > 0 && (
                   <div className="pt-4">
@@ -144,17 +119,11 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold shadow-xs mb-6">
             <Coffee className="w-3.5 h-3.5 text-[#FF6B00]" />
-            <span>Katalog Varian Produk Java Cafe</span>
+            <span>Katalog Varian</span>
           </div>
           <h1 className="text-5xl lg:text-6xl font-black text-[#1A1A1A] mb-6 leading-tight">
-            Menu Minuman <span className="text-[#FF6B00]">Bintang Lima</span>
+            Menu Minuman <span className="text-[#FF6B00]">Produk Java Cafe</span>
           </h1>
-          <p className="text-2xl text-[#FF6B00] font-bold mb-6">
-            Margin 60% – 70%
-          </p>
-          <p className="text-base text-gray-700 max-w-2xl mx-auto leading-relaxed">
-            CV Hazna Berkah Indonesia menghadirkan 8 pilihan varian menu terlaris Java Cafe dengan racikan kualitas kafe premium dan HPP super hemat.
-          </p>
         </div>
       </div>
 
