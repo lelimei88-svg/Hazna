@@ -14,6 +14,17 @@ export const IMAGES = {
   boothContainer: '/src/assets/images/javacafe_booth_1785119575726.jpg',
   entrepreneur: '/src/assets/images/javacafe_entrepreneur_1785119591826.jpg',
   consultation: '/src/assets/images/javacafe_entrepreneur_1785119591826.jpg',
+
+  produk: {
+    americano: '/assets/images/americano.jpg',
+    cafeLatte: '/assets/images/cafe-latte.jpg',
+    jamilo: '/assets/images/jamilo.jpg',
+    lemonade: '/assets/images/lemonade.jpg',
+    matcha: '/assets/images/matcha.jpg',
+    matchaCoco: '/assets/images/matcha-coco.jpg',
+    milo: '/assets/images/milo.jpg',
+    cappuccinoAssassino: '/assets/images/cappuccino-assassino.jpg', // Pastikan file ini ada di folder
+  }
 };
 
 export const BENEFITS: BenefitItem[] = [
