@@ -27,14 +27,14 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
   const coffeeProducts = PRODUCTS.filter((p) => p.category === 'coffee');
   const nonCoffeeProducts = PRODUCTS.filter((p) => p.category === 'non-coffee');
 
-  // Single Product Section - Erdigma Style
   const ProductSection = ({ product, index, isEven }: { product: Product; index: number; isEven: boolean }) => {
     const isCoffee = product.category === 'coffee';
     
     return (
-      <div className={`w-full py-20 ${isEven ? 'bg-white' : 'bg-[#FDF6F0]'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center ${!isEven ? 'lg:grid-flow-dense' : ''}`}>
+      <div className={`w-full py-10 ${isEven ? 'bg-white' : 'bg-[#FDF6F0]'}`}>
+        {/* max-w dikurangi jadi 5xl agar layout lebih rapat & foto lebih kecil */}
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${!isEven ? 'lg:grid-flow-dense' : ''}`}>
             
             {/* Image Side */}
             <div className={`relative ${!isEven ? 'lg:col-start-2' : ''}`}>
@@ -51,19 +51,12 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
                     {product.isBestSeller ? 'Best Seller' : 'New Arrival'}
                   </div>
                 )}
-
-                {product.isNew && (
-                  <div className="absolute top-6 right-6 bg-emerald-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                    New
-                  </div>
-                )}
               </div>
             </div>
 
             {/* Content Side */}
             <div className={`${!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF6B00]/10 text-[#FF6B00] text-[10px] font-bold uppercase tracking-wider">
                   {isCoffee ? <Coffee className="w-3 h-3" /> : <Sparkles className="w-3 h-3" />}
                   {product.categoryLabel}
@@ -90,17 +83,15 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
                   </div>
                 )}
 
-                {/* Learn More Button - Erdigma Style */}
                 <button
                   onClick={() => onInquireProduct(product.name)}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border-2 border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white font-bold text-sm transition-all duration-300 group mt-4"
+                  className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white font-bold text-xs transition-all duration-300 group mt-2"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -109,65 +100,55 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onInquireProdu
 
   return (
     <div className="w-full">
-      {/* Hero Section - Product Overview */}
-      <div className="bg-gradient-to-br from-[#FDF6F0] to-white py-24 text-center">
+      {/* Hero Section - Dikurangi padding py-12 dan judul text-4xl */}
+      <div className="bg-gradient-to-br from-[#FDF6F0] to-white py-12 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold shadow-xs mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold shadow-xs mb-4">
             <Coffee className="w-3.5 h-3.5 text-[#FF6B00]" />
             <span>Katalog Varian</span>
           </div>
-          <h1 className="text-5xl lg:text-6xl font-black text-[#1A1A1A] mb-6 leading-tight">
+          <h1 className="text-4xl font-black text-[#1A1A1A] mb-4 leading-tight">
             Menu Minuman <span className="text-[#FF6B00]">Produk Java Cafe</span>
           </h1>
         </div>
       </div>
 
-      {/* Coffee Series Header */}
-      <div className="bg-white py-12 border-b border-orange-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Coffee Series Header - Padding dikurangi */}
+      <div className="bg-white py-6 border-b border-orange-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#FF6B00] flex items-center justify-center shadow-lg">
-                <Coffee className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-[#FF6B00] flex items-center justify-center shadow-lg">
+                <Coffee className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-3xl font-black text-[#1A1A1A]">Coffee Series</h2>
-                <p className="text-sm text-gray-600 font-medium">Formulasi espresso mantap dengan karakter rasa lembut & kaya aroma</p>
+                <h2 className="text-2xl font-black text-[#1A1A1A]">Coffee Series</h2>
               </div>
-            </div>
-            <div className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-[#FF6B00] text-sm font-bold">
-              {coffeeProducts.length} Varian Menu
             </div>
           </div>
         </div>
       </div>
 
-      {/* Coffee Products - Alternating Layout */}
       {coffeeProducts.map((product, index) => (
         <ProductSection key={product.id} product={product} index={index} isEven={index % 2 === 0} />
       ))}
 
-      {/* Non-Coffee Series Header */}
-      <div className="bg-[#FDF6F0] py-12 border-b border-orange-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Non-Coffee Series Header - Padding dikurangi */}
+      <div className="bg-[#FDF6F0] py-6 border-b border-orange-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center shadow-lg">
-                <Sparkles className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center shadow-lg">
+                <Sparkles className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h2 className="text-3xl font-black text-[#1A1A1A]">Non-Coffee Series</h2>
-                <p className="text-sm text-gray-600 font-medium">Kesegaran rasa cokelat, matcha Jepang otentik, dan sari buah alami</p>
+                <h2 className="text-2xl font-black text-[#1A1A1A]">Non-Coffee Series</h2>
               </div>
-            </div>
-            <div className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-bold">
-              {nonCoffeeProducts.length} Varian Menu
             </div>
           </div>
         </div>
       </div>
 
-      {/* Non-Coffee Products - Alternating Layout */}
       {nonCoffeeProducts.map((product, index) => (
         <ProductSection key={product.id} product={product} index={index} isEven={index % 2 === 0} />
       ))}
